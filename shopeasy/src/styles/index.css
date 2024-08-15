@@ -1,3 +1,5 @@
+/*리액트 애플리케이션 전체에 적용된 전역 스타일 정의*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
