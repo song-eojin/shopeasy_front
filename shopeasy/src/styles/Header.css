@@ -1,16 +1,23 @@
 .header {
   background-color: black;
   padding: 5px;
+  box-sizing: border-box;
 }
 
 #header-logo {
   width: 150px;
 }
 
+#header-homebar ul {
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  justify-content: center;
+}
+
 #header-homebar ul li {
   display: inline-block;
   margin: 0 20px 0 20px;
-  justify-content: flex-end;
 }
 
 .homebar {
@@ -74,25 +81,10 @@ input:-ms-input-placeholder{
   background-color: #db545a; /* 테두리 색상 설정 */
 }
 
-@media (max-width: 575px) {
-  #header-top {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-  #header-top {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
 @media (max-width: 767px) {
   #header-top {
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 50px;
   }
@@ -104,5 +96,8 @@ input:-ms-input-placeholder{
     justify-content: space-between;
     flex-direction: row;
     margin-bottom: 30px;
+  }
+  #header-homebar {
+    margin-top: 30px;
   }
 }

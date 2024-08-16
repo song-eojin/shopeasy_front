@@ -1,8 +1,11 @@
 .footer {
-    background-color: black;
+    position: relative;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
     padding: 5px;
+    background-color: black;
+    box-sizing: border-box;
 }
 
 #footer-logo {

@@ -11,6 +11,10 @@ body {
   text-decoration: none;
 }
 
+.list {
+  list-style-type: none;
+}
+
 .search input {
   background-color: transparent; 
   padding: 10px;

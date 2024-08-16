@@ -8,16 +8,19 @@ import Footer from "./components/common/Footer";
 import Home from './components/pages/Home';
 import Mypage from './components/pages/Mypage';      
 // import Mypage from './components/pages/Login'; 
+import './styles/App.css';
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mypage" element={<Mypage />} />
-        {/* <Route path="/login" element={<Login />} /> */}
-      </Routes>
+      <div className="content-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mypage" element={<Mypage />} />
+          {/* <Route path="/login" element={<Login />} /> */}
+        </Routes>
+      </div>
       {/*여기에 페이지별 콘텐츠 추가*/}
       <Footer />
     </div>
