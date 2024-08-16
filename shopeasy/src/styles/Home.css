@@ -1,0 +1,99 @@
+.ad-container {
+    position: relative;
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.ad-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+.ad-content-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+  
+.ad-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: none; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden;
+}
+
+.ad-slide.hidden {
+    display: none; /* 슬라이드가 보이지 않도록 설정 */
+}
+  
+.ad-slide.visible {
+    display: flex; 
+}
+
+.ad-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: opacity 0.3s ease; /* 전환 효과 추가 */
+}
+
+/* 제목과 설명의 기본 상태 */
+.ad-slide:hover .ad-caption {
+    opacity: 1; /* 마우스 오버 시 보임 */
+    visibility: visible; /* 마우스 오버 시 보임 */
+    color: rgba(255, 255, 255, 1);
+}
+
+.ad-slide:hover img {
+    filter: brightness(90%) contrast(100%);
+}
+
+.ad-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* 중앙 정렬 */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0; /* 기본 상태에서 숨김 */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+}
+
+.ad-caption h3 {
+    font-size: 1.2rem; /* 제목의 크기를 조절 */
+    font-weight: bold; /* 제목을 볼드체로 설정 */
+}
+
+/*광고 네비게이션 버튼*/
+.ad-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem; 
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 20; 
+}
+  
+.ad-control-prev {
+    left: 10px; 
+}
+  
+.ad-control-next {
+    right: 10px;
+}
+  
