@@ -15,42 +15,43 @@ function Home() {
   };
 
   return (
-    <div className="ad-container">
-      {/*광고위치-1*/}
-      <div className="ad-content">
-        <div className="ad-content-image">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`ad-slide ${index === currentSlide ? 'visible' : 'hidden'}`}
-          >
-            <img src={slide.imgSrc} alt={slide.title} />
-            <div className="ad-caption">
-              <h3>{slide.title}</h3>
-              <p>{slide.text}</p>
+    <div className="home-container">
+      <div className="ad-container">
+        {/*광고위치-1*/}
+        <div className="ad-content">
+          <div className="ad-content-image">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`ad-slide ${index === currentSlide ? 'visible' : 'hidden'}`}
+            >
+              <img src={slide.imgSrc} alt={slide.title} />
+              <div className="ad-caption">
+                <h3>{slide.title}</h3>
+                <p>{slide.text}</p>
+              </div>
             </div>
+          ))}
           </div>
-        ))}
-        </div>
 
-        {/*광고 네비게이션 버튼*/}
-        <button
-          className="ad-control ad-control-prev"
-          onClick={() => handleSlideChange(-1)}
-          aria-label="Previous Slide"
-        >
-          ‹
-        </button>
-        <button
-          className="ad-control ad-control-next"
-          onClick={() => handleSlideChange(1)}
-          aria-label="Next Slide"
-        >
-          ›
-        </button>
+          {/*광고 네비게이션 버튼*/}
+          <button
+            className="ad-control ad-control-prev"
+            onClick={() => handleSlideChange(-1)}
+            aria-label="Previous Slide"
+          >
+            ‹
+          </button>
+          <button
+            className="ad-control ad-control-next"
+            onClick={() => handleSlideChange(1)}
+            aria-label="Next Slide"
+          >
+            ›
+          </button>
+        </div>
       </div>
     </div>
-
   );
 }
 
