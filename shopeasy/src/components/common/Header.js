@@ -21,9 +21,7 @@ const Header = () => {
           <ul className="u-nav u-unstyled u-nav-1">
             <li><Link to="/" className="link homebar">Home</Link></li>
             <li><Link to="/mypage" className="link homebar">My Page</Link></li>
-            <li><Link to="/shop2" className="link homebar">Login</Link></li>
-            <li><Link to="/about" className="link homebar">About Us</Link></li>
-            <li><Link to="/contact" className="link homebar">Contact</Link></li>
+            <li><Link to="/login" className="link homebar">Login</Link></li>
           </ul>
         </nav>
 
