@@ -1,28 +1,49 @@
-#signup-container {
+#signup-title {
     margin: 70px auto 30px auto;
 }
 
-#signup-title {
-}
-
-#login-title-comment {
+#signup-title-comment {
     font-weight: 600;
-}
+    text-align: center;}
 
-#login-title-comment span {
+#signup-title-comment-click {
     background-color: black;
     color: white;
+    cursor: pointer;
+}
+    
+#signup-title-comment-click:hover {
+    background-color: #db545a;
 }
 
-#login-content {
-    margin: auto 10%;
+#signup-content-container {
+    margin: auto 10% 20%;
+}
+
+#signup-content-title-sns {
+    text-align: center;
+    margin-top:80px;
+    margin-bottom:30px;
+    font-weight: 600;
+    color: #db545a;
+}
+
+#signup-content-title-shopeasy {
+    text-align: center;
+    margin-top:80px;
+    margin-bottom:30px;
+    font-weight: 600;
+    color: black;
+}
+
+#signup-content {
     padding: 40px 10%;
     border-radius: 50px;
     background-color: black;
     color: white;
 }
 
-.login-input {
+.signup-input {
     display: block;
     width: 100%;
     height: 50px;
@@ -57,31 +78,24 @@
     font-size: 0.9em;
 }
 
-#login-button {
+.signup-button {
     background-color: #db545a;
+    color: black;
     font-size: 1rem;
     font-weight: 900;
-    border: 0;
+    border: 1px solid;
     width: 100%;
     height: 50px;
+    text-align: center;
+    align-content: center;
+}
+
+#go-login {
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 
-#login-link-container {
-    margin-bottom: 50px;
-}
-
-.login-link {
-    color: #db545a;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.login-link:hover {
-    color: white;
-}
-
-#login-button:hover {
+.signup-button:hover {
     background-color: transparent;
     color: white;
     border: 1px solid white;
