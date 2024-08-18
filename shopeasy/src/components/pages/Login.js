@@ -8,7 +8,7 @@ function Login() {
         <div className="login-container">
             <div id="login-title">
                 <h1 className="center">LOGIN</h1>
-                <p id="login-title-comment">회원가입이 필요하다면 <Link to="/signup" className="link" id="login-title-comment-click">&nbsp; SIGNUP &nbsp;</Link> 클릭</p>
+                <p id="login-title-comment">회원가입이 필요하다면<br />회원가입 바로가기 <Link to="/signup" className="link" id="login-title-comment-click">&nbsp; SIGNUP &nbsp;</Link> 클릭</p>
             </div>
             <div id="login-content">
                 <div>
