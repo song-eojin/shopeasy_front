@@ -1,5 +1,5 @@
 #signup-title {
-    margin: 70px auto 30px auto;
+    margin-bottom: 40px;
 }
 
 #signup-title-comment {
@@ -123,4 +123,19 @@
 .sns-button:hover {
     background-color: #db545a;
     color: white;
+}
+
+
+/*반응형 웹 디자인*/
+@media (max-width: 699px) {
+    #signup-container {
+        margin: 10% 2.5% auto 2.5%;
+        width: 95%;
+    }   
+}
+@media (min-width: 900px) {  
+    #signup-container {
+        margin: 70px auto 0 auto;
+        width: 900px;
+    }   
 }
