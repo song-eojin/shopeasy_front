@@ -7,7 +7,8 @@ import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import Home from './components/pages/Home';
 import Mypage from './components/pages/Mypage';      
-// import Mypage from './components/pages/Login'; 
+import Login from './components/pages/Login'; 
+import Signup from './components/pages/Signup'; 
 import './styles/App.css';
 
 function App() {
@@ -18,10 +19,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mypage" element={<Mypage />} />
-          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
-      {/*여기에 페이지별 콘텐츠 추가*/}
       <Footer />
     </div>
   );
