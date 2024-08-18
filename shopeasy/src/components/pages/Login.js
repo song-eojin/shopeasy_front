@@ -15,19 +15,25 @@ function Login() {
                     <form name="form">
                         <div className="inputset">
                             <label for="name-4c18">Username</label>
-                            <input className="input login-input" type="text" placeholder="아이디" id="name-4c18" name="username" required="" />
+                            <input className="input login-input" type="text" placeholder="아이디" id="name-4c18" name="username" required="required" />
                         </div>
                         <div className="inputset">
                             <label for="email-4c18" >Password</label>
                             <input type="text" placeholder="비밀번호 (총 8자 이상, 숫자와 영어 조합)" id="email-4c18" name="password" className="input login-input" required="required" maxlength="20" />
                         </div>
                         <div className="inputset">
-                            <input type="checkbox" name="login-remember" required="" />
-                            <label for="agree-a472" >로그인 기억하기</label>
+                            <input
+                                type="checkbox"
+                                className="checkbox"
+                                name="remember"
+                            />
+                            <label htmlFor="remember" className="checkbox-label">
+                                로그인 기억하기
+                            </label>
                         </div>
 
                         {/*로그인 제출버튼*/}
-                        <div className="u-align-right u-form-group u-form-submit">
+                        <div>
                             <input type="submit" value="로그인 하기" id="login-button" />
                         </div>
                     </form>
