@@ -23,7 +23,7 @@ function Login() {
                         <div className="u-form-agree u-form-group u-form-group-3">
                             <label className="u-field-label"></label>
                             <input type="checkbox" id="agree-a472" name="remember" className="u-active-palette-2-base u-agree-checkbox u-field-input u-hover-palette-2-base u-white" required="" />
-                            <label for="agree-a472" className="u-agree-label u-block-a35c-16 u-field-label" style="">로그인 기억하기</label>
+                            <label for="agree-a472" className="u-agree-label u-block-a35c-16 u-field-label">로그인 기억하기</label>
                         </div>
                         <div className="u-align-right u-form-group u-form-submit">
                             <Link href="#" className="u-border-active-palette-4-light-1 u-border-hover-palette-4-light-1 u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-palette-2-base u-radius-10 u-text-hover-white u-btn-1">로그인 하기</Link>
