@@ -15,6 +15,25 @@ body {
   list-style-type: none;
 }
 
+.inputset {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.input {
+  color: beige;
+  background-color: transparent;
+  margin-bottom: 30px;
+}
+
+.input::placeholder {
+  color: #afa5a5;
+}
+
+.center {
+  text-align: center;
+}
+
 .search input {
   background-color: transparent; 
   padding: 10px;
