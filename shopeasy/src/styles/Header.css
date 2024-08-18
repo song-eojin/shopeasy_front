@@ -8,28 +8,41 @@
   width: 150px;
 }
 
-#header-homebar ul {
+.header-bar ul {
   padding: 0; 
   margin: 0; 
   display: flex; 
   justify-content: center;
 }
 
-#header-homebar ul li {
+.header-bar ul li {
   display: inline-block;
   margin: 0 20px 0 20px;
 }
 
 .homebar {
-  color: white;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 600;
+}
+
+#header-menubar-column {
+  margin-top: 30px;
+}
+
+#header-menubar-column.visible {
+  display: flex;
 }
 
 #header-bottom {
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-between;
+}
+
+#header-bottom-fixedset {
+  display: flex;
+  align-items: center;
 }
 
 #header-cart {
@@ -58,7 +71,6 @@
 #header-search {
   margin: 0 15px;
   display: flex;
-  justify-content: right;
 }
 
 #header-search input {
@@ -88,6 +100,23 @@ input:-ms-input-placeholder{
     flex-direction: column;
     margin-bottom: 50px;
   }
+  #header-menubar-column {
+    visibility: show;
+  }
+  #header-menubar-row {
+    visibility: hidden;
+    display: none;
+    
+  }
+  .menubar {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+  }
+  #header-bottom-fixedset {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) {  
@@ -99,5 +128,20 @@ input:-ms-input-placeholder{
   }
   #header-homebar {
     margin-top: 30px;
+  }
+  #header-menubar-row {
+    justify-content: flex-start;
+  }
+  #header-menubar-column {
+    visibility: hidden;
+    display: none;
+  }
+  .menubar {
+    color: #db545a;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  #header-bottom-fixedset {
+    justify-content: flex-end;
   }
 }
