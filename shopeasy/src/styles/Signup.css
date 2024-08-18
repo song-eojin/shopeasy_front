@@ -1,20 +1,17 @@
-#login-title {
+#signup-container {
     margin: 70px auto 30px auto;
+}
+
+#signup-title {
 }
 
 #login-title-comment {
     font-weight: 600;
-    text-align: center;
 }
 
-#login-title-comment-click {
+#login-title-comment span {
     background-color: black;
     color: white;
-    cursor: pointer;
-}
-
-#login-title-comment-click:hover {
-    background-color: #db545a;
 }
 
 #login-content {

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../index.css';
-import '../../styles/Login.css';
+import '../../styles/Signup.css';
 
-function Login() {
+function Signup() {
     return (
-        <div className="login-container">
+        <div className="signup-container">
             <div id="login-title">
-                <h1 className="center">LOGIN</h1>
-                <p id="login-title-comment">회원가입이 필요하다면 <Link to="/signup" className="link" id="login-title-comment-click">&nbsp; SIGNUP &nbsp;</Link> 클릭</p>
+                <h1 className="center">SIGNUP</h1>
+                <p id="login-title-comment"className="center">Welocome to <span>&nbsp; SHOPEASY &nbsp;</span></p>
+                <p id="login-title-comment"className="center">처음이시고요?<span>&nbsp; SIGNUP &nbsp;</span></p>
             </div>
             <div id="login-content">
                 <div>
@@ -39,8 +40,8 @@ function Login() {
                     </form>
                 </div>
                 <div id="login-link-container">
-                    <Link href="#" className="link login-link">아이디/비밀번호 찾기</Link>
-                    <Link to="/signup" className="link login-link">회원 가입</Link>
+                    <Link href="#" className="link login-link">아이디/비밀번호 찾기 </Link>
+                    <Link href="signup.html" className="link login-link">회원 가입 </Link>
                 </div>
             </div>
 
@@ -54,4 +55,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Signup;
