@@ -8,6 +8,8 @@
   width: 150px;
 }
 
+
+/*홈바, 메뉴바 공통*/
 .header-bar ul {
   padding: 0; 
   margin: 0; 
@@ -20,12 +22,16 @@
   margin: 0 20px 0 20px;
 }
 
+
+/*홈바*/
 .homebar {
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
 }
 
+
+/*메뉴바*/
 #header-menubar-column {
   margin-top: 30px;
 }
@@ -45,6 +51,8 @@
   align-items: center;
 }
 
+
+/*장바구니*/
 #header-cart {
   margin: 20px 20px;
   display: flex;
@@ -68,9 +76,12 @@
   padding-top: 7px;
 }
 
+
+/*검색*/
 #header-search {
   margin: 0 15px;
   display: flex;
+  align-items: center;
 }
 
 #header-search input {
@@ -91,14 +102,17 @@ input:-ms-input-placeholder{
 
 #header-search-button {
   background-color: #db545a; /* 테두리 색상 설정 */
+  height: 35px;
 }
 
+
+/*반응형 웹 디자인*/
 @media (max-width: 767px) {
   #header-top {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
   }
   #header-menubar-column {
     visibility: show;
