@@ -5,7 +5,7 @@ import '../../styles/Login.css';
 
 function Login() {
     return (
-        <div className="login-container">
+        <div id="login-container">
             <div id="login-title">
                 <h1 className="center">LOGIN</h1>
                 <p id="login-title-comment">회원가입이 필요하다면<br />회원가입 바로가기 <Link to="/signup" className="link" id="login-title-comment-click">&nbsp; SIGNUP &nbsp;</Link> 클릭</p>
@@ -15,7 +15,7 @@ function Login() {
                     <form name="form">
                         <div className="inputset">
                             <label for="name-4c18">Username</label>
-                            <input className="input login-input" type="text" placeholder="아이디" id="name-4c18" name="username" required="required" />
+                            <input className="input login-input" type="text" placeholder="아이디" id="username-4c18" name="username" required="required" />
                         </div>
                         <div className="inputset">
                             <label for="email-4c18" >Password</label>

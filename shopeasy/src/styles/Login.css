@@ -1,3 +1,7 @@
+#login-container {
+    padding-bottom: 7%;
+}
+
 #login-title {
     margin: 70px auto 30px auto;
 }
@@ -92,10 +96,6 @@
 
 
 /*SNS 간편로그인*/
-#sns-container {
-    margin: 50px 10%;
-}
-
 .sns-button {
     display: block;
     text-align: center;
