@@ -67,7 +67,6 @@ const Signup = () => {
             console.error('Error:', error);
         }
     };
-
     return (
         <div id="signup-container">
             <div id="signup-title">
@@ -148,6 +147,7 @@ const Signup = () => {
                             </div>
 
                             {/* 회원가입 제출버튼 */}
+
                             <div className="signup-button-container">
                                 <input type="submit" value="회원가입 하기" className="signup-button" id="signup-submit" />
                             </div>
@@ -157,6 +157,7 @@ const Signup = () => {
                         <Link to="/login" className="link">
                             <div className="signup-button">로그인 바로가기</div>
                         </Link>
+
                     </div>
                 </div>
             </div>

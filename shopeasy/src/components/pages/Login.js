@@ -54,15 +54,15 @@ const Login = () => {
                         />
                     </div>
                     <div className="inputset">
-                            <input
-                                type="checkbox"
-                                className="checkbox"
-                                name="remember"
-                            />
-                            <label htmlFor="remember" className="checkbox-label">
-                                로그인 기억하기
-                            </label>
-                        </div>
+                        <input
+                            type="checkbox"
+                            className="checkbox"
+                            name="remember"
+                        />
+                        <label htmlFor="remember" className="checkbox-label">
+                            로그인 기억하기
+                        </label>
+                    </div>
                     {error && <p>{error}</p>}
                     <input type="submit" value="로그인 하기" id="login-button" />
                 </form>
