@@ -1,55 +1,162 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // useNavigate  추가
+import { createUser } from '../../api/userApi';
 import { Link } from 'react-router-dom';
 import '../../index.css';
 import '../../styles/Signup.css';
 
-function Signup() {
+const Signup = () => {
+    const [formData, setFormData] = useState({
+        username: '',
+        nickname: '',
+        email: '',
+        password: ''
+    });
+
+    const [errors, setErrors] = useState({
+        email: '',
+        password: ''
+    });
+
+    const navigate = useNavigate(); // useNavigate 훅 사용
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const validateForm = () => {
+        let isValid = true;
+        let emailError = '';
+        let passwordError = '';
+
+        // 이메일 정규식
+        const emailReg = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
+        if (!emailReg.test(formData.email)) {
+            emailError = 'Invalid email address';
+            isValid = false;
+        }
+
+        // 비밀번호 정규식
+        const passwordReg = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
+        if (!passwordReg.test(formData.password)) {
+            passwordError = 'Password must be 8-20 characters long and include at least one uppercase letter, one lowercase letter, and one special character';
+            isValid = false;
+        }
+
+        setErrors({ email: emailError, password: passwordError });
+        return isValid;
+    };
+
+    //폼 제출을 처리 (검증에 실패하면 API 호출을 하지 않음)
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
+
+        try {
+            const response = await createUser(formData);
+            console.log(response.data); // 성공 시 응답 데이터 확인
+            navigate('/login'); // 로그인 페이지로 리디렉션
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
     return (
         <div id="signup-container">
             <div id="signup-title">
                 <h1 className="center">SIGNUP</h1>
-                <p id="login-title-comment">회원가입이 필요 없다면<br />
-                    로그인 바로가기 <Link to="/login" className="link" id="signup-title-comment-click">&nbsp; LOGIN &nbsp;</Link> 클릭</p>
+                <p id="login-title-comment">
+                    회원가입이 필요 없다면<br />
+                    로그인 바로가기 <Link to="/login" className="link" id="signup-title-comment-click">&nbsp; LOGIN &nbsp;</Link> 클릭
+                </p>
             </div>
 
-            {/*SNS 간편회원가입*/}
+            {/* SNS 간편회원가입 */}
             <div id="sns-container">
                 <div id="signup-content-title-sns">SNS 계정으로 간편 회원가입</div>
-                <Link href="#" className="link sns-button">Kakao </Link>
-                <Link href="#" className="link sns-button">Naver </Link>
-                <Link href="#" className="link sns-button">Google </Link>
+                <Link to="#" className="link sns-button">Kakao</Link>
+                <Link to="#" className="link sns-button">Naver</Link>
+                <Link to="#" className="link sns-button">Google</Link>
             </div>
 
             <div id="signup-content-container">
                 <div id="signup-content-title-shopeasy">SHOPEASY 계정으로 일반 회원가입</div>
                 <div id="signup-content">
                     <div>
-                        <form name="form">
+                        <form onSubmit={handleSubmit}>
                             <div className="inputset">
-                                <label for="username-4c18">Username</label>
-                                <input className="input signup-input" type="text" placeholder="아이디" id="username-4c18" name="username" required="required" />
+                                <label htmlFor="username">Username</label>
+                                <input
+                                    className="input signup-input"
+                                    type="text"
+                                    placeholder="아이디"
+                                    id="username"
+                                    name="username"
+                                    value={formData.username}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                             <div className="inputset">
-                                <label for="username-4c18">Nickname</label>
-                                <input className="input signup-input" type="text" placeholder="닉네임" id="nickname-4c18" name="nickname" required="required" />
+                                <label htmlFor="nickname">Nickname</label>
+                                <input
+                                    className="input signup-input"
+                                    type="text"
+                                    placeholder="닉네임"
+                                    id="nickname"
+                                    name="nickname"
+                                    value={formData.nickname}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                             <div className="inputset">
-                                <label for="email-4c18">Email</label>
-                                <input className="input signup-input" type="text" placeholder="이메일" id="email-4c18" name="email" required="required" />
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    className="input signup-input"
+                                    type="text"
+                                    placeholder="이메일"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                {errors.email && <p className="error">{errors.email}</p>}
                             </div>
                             <div className="inputset">
-                                <label for="password-4c18" >Password</label>
-                                <input type="text" placeholder="비밀번호 (총 8자 이상, 숫자와 영어 조합)" id="password-4c18" name="password" className="input signup-input" required="required" maxlength="20" />
+                                <label htmlFor="password">Password</label>
+                                <input
+                                    type="password"
+                                    placeholder="비밀번호 (총 8자 이상, 숫자와 영어 조합)"
+                                    id="password"
+                                    name="password"
+                                    className="input signup-input"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    required
+                                    maxLength="20"
+                                />
+                                {errors.password && <p className="error">{errors.password}</p>}
                             </div>
 
-                            {/*회원가입 제출버튼*/}
+                            {/* 회원가입 제출버튼 */}
                             <div className="signup-button-container">
                                 <input type="submit" value="회원가입 하기" className="signup-button" id="signup-submit" />
                             </div>
                         </form>
                     </div>
                     <div id="go-login">
-                        <Link to="/login"  className="link"><div className="signup-button">로그인 바로가기</div></Link>
+                        <Link to="/login" className="link">
+                            <div className="signup-button">로그인 바로가기</div>
+                        </Link>
                     </div>
                 </div>
             </div>
