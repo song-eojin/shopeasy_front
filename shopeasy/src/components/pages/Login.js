@@ -31,7 +31,7 @@ const Login = () => {
             <div id="login-content">
                 <form  className="inputset" onSubmit={handleSubmit}>
                     <div>
-                        <label>Username</label>
+                        <label>Id</label>
                         <input
                             className="input login-input" 
                             placeholder="아이디"

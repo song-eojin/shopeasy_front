@@ -91,7 +91,7 @@ const Signup = () => {
                     <div>
                         <form onSubmit={handleSubmit}>
                             <div className="inputset">
-                                <label htmlFor="username">Username</label>
+                                <label htmlFor="username">Id</label>
                                 <input
                                     className="input signup-input"
                                     type="text"
@@ -104,14 +104,14 @@ const Signup = () => {
                                 />
                             </div>
                             <div className="inputset">
-                                <label htmlFor="nickname">Nickname</label>
+                                <label htmlFor="realname">Name</label>
                                 <input
                                     className="input signup-input"
                                     type="text"
-                                    placeholder="닉네임"
-                                    id="nickname"
-                                    name="nickname"
-                                    value={formData.nickname}
+                                    placeholder="이름"
+                                    id="realname"
+                                    name="realname"
+                                    value={formData.realname}
                                     onChange={handleChange}
                                     required
                                 />
