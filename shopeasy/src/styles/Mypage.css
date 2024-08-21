@@ -1,0 +1,75 @@
+.mypage-container {
+    display: flex;
+    height: 100vh;
+    margin:0;
+    padding:0;
+}
+
+/*왼쪽 패널*/
+#left-pannel {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 250px;
+    padding: 30px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+#left-pannel p {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+#left-pannel div {
+    margin: 30px;
+}
+
+/*오른쪽 본문*/
+#right-content {
+    width: 100%;
+    height: 100hv;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 0;
+}
+#right-content-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-left: 0.5px;
+    padding: 50px;
+    background-color: black;
+    color: white;
+    gap: 50px;
+}
+#right-content-middle {
+    flex: 1; /* 남은 공간을 차지 */
+    padding: 70px; 
+    border-top: 4px solid;
+    display: flex;
+    gap: 50px;
+    overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+}
+#profile_image {
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%;
+}
+.mypage-content {
+    font-size: 1em;
+    margin: 10px 0;
+    padding: 10px 20px; 
+}
+#right-content-bottom {
+    padding-left: 70px;
+}
+#recent-purchase-products {
+    border-top: 4px solid;
+    margin-right: 70px;
+}
+
+/*회원정보수정*/
+#mypage-edit{
+    padding: 50px 70px;
+}
